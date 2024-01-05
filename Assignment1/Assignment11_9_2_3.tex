@@ -100,7 +100,7 @@ Now, let's manipulate this expression. We can split it into two parts:
     \[\hspace{3.9cm}=6(1\cdot z^{-1} + 2\cdot z^{-2} + 3\cdot z^{-3} + \dots)\]
     This is AGP.
     \[S=1\cdot z^{-1}+2\cdot z^{-2}+3\cdot z^{-3}+\dots\]
-    \[\hspace{0.7cm}z^{-1}S=\hspace{1.5cm}1\cdot z^{-2}+2\cdot z^{-3}+3\cdot z^{-4}+\dots\]
+    \[-\hspace{0.5cm}z^{-1}S=\hspace{1.5cm}1\cdot z^{-2}+2\cdot z^{-3}+3\cdot z^{-4}+\dots\]
     \hrulefill
     \[(1-z^{-1}S)=z^{-1}+z^{-2}+z^{-3}+z^{-4}+\dots\]
     \[(1-z^{-1})S=\frac{z^{-1}}{1-z^{-1}}\]
@@ -110,5 +110,29 @@ Now, let's manipulate this expression. We can split it into two parts:
 \vspace{1cm}
 \[T(z)=\frac{8z^{-1}}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}\]
 
+\newpage
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Figure_1.png}
+    \[Fig. 1\hspace{2mm}x(n) = 8 - 6n\]
+\end{figure}
+
+Given that \( n > 0 \), let's analyze the ROC for the Z-transform of the sequence \( x[n] = 8 - 6n \):
+
+\[X(z) = \sum_{n=1}^{\infty} (8 - 6n) \cdot z^{-n}\]
+
+For convergence, the series 
+\vspace{2mm}
+\[\sum_{n=1}^{\infty} (8 - 6n) \cdot |z|^{-n}\]
+
+\vspace{2mm}
+must converge. This implies that \( |z| \) should be greater than the magnitude of the terms \( (8 - 6n) \). The terms \( (8 - 6n) \) decrease in magnitude as \( n \) increases, so the ROC is the set of complex numbers \( z \) such that \( |z| \) is greater than the magnitude of the terms for all \( n \).
+\vspace{2mm}
+
+In this case, the ROC is the region outside the circle with radius equal to the magnitude of the first term \( |8| \) in the series, i.e.; outside the circle \( |z| > 8 \).
+\vspace{2mm}
+
+So, the Region of Convergence (ROC) for the Z-transform of the sequence \( x[n] = 8 - 6n \) with \( n > 0 \) is the exterior of the circle \( |z| > 8 \).
 
 \end{document}
