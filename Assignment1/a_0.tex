@@ -69,55 +69,63 @@ In an A.P. the first term is 2 and the sum of the first five terms is one-fourth
     \hline
     \textbf{Parameter} & \textbf{Value} \\
     \hline
-    First term (\(a\)) & 2 \\
+    First term (\(x(1)\)) & 2 \\
     \hline
   \end{tabular}
+  \caption{Input data}
+  \label{Table 1}
 \end{table}
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        sum of first five terms & $\frac{1}{4}$ sum of next five terms  \\\hline
-    \end{tabular}
-\end{table}
-
-\[T_1 + T_2 + T_3 + T_4 + T_5 = \frac{1}{4} [T_6 + T_7 + T_8 + T_9 + T_{10}]\]
-Let the first term \(a\) and the common difference \(d\)
-\[[a + (a + d) + (a + 2d) + (a + 3d) + (a + 4d)] =\] 
-\[\frac{1}{4} [(a + 5d) + (a + 6d) + (a + 7d) + (a + 8d) + (a + 9d)]\]
+   \begin{align}
+    T_1 + T_2 + T_3 + T_4 + T_5 = \frac{1}{4} [T_6 + T_7 + T_8 + T_9 + T_{10}]
+    \end{align}
+Let the zero\textsuperscript{th} term \(a\) and the common difference \(d\)
+\[[(a + d) + (a + 2d) + (a + 3d) + (a + 4d) + (a + 5d)] =\] 
+\[\frac{1}{4} [(a + 6d) + (a + 7d) + (a + 8d) + (a + 9d) + (a + 10d)]\]
 
 
 Simplifying:
     \begin{align}
-    (5a + 10d) &= \frac{1}{4}(5a + 35d)\\
-    20a + 40d &= 5a + 35d\\
-    15a + 5d &= 0\\
-    3a + d &= 0 
+    (5a + 15d) &= \frac{1}{4}(5a + 40d)\\
+    20a + 60d &= 5a + 40d\\
+    15a + 20d &= 0\\
+    3a + 4d &= 0 
     \end{align}
 
-$\implies d = -3a \implies d = -6 \quad(\text{given}a=2)$\\
+    given x(1) = x(0) + d = 2
     \begin{align}
-        T_{20}&=a+19d\\
-        &=2+19(-6) = -112
+        \implies 2 &= \frac{-4d}{3} +d\\
+        \implies 2 &= \frac{-d}{3}\\
+        \implies d &= -6\\
+        \implies x(0) &= 8
     \end{align}
-$a = 2\quad \text{and}\quad d = -6$
+
     \begin{align}
-    t_{n}&=a+(n-1)d\\
-    \implies t_{n}&=2+(n-1)(-6)\\
-    \implies t_{n}&=8-6n
+        x(20)&=x(0)+20d\\
+        &=8+20(-6) = -112
+    \end{align}
+\centering
+$x(0) = 8\quad \text{and}\quad d = -6$
+    \begin{align}
+    x(n)&=x(0)+nd\\
+    \implies x(n)&=8+(n)(-6)\\
+    \implies x(n)&=8-6n
     \end{align}    
-The Z-transform of a sequence $t_n$ is given by:
-
-\[ T(z) = \sum_{n=0}^{\infty} t_n z^{-n} \]
+The Z-transform of a sequence $x(n)$ is given by:
+    \begin{align}
+    T(z) = \sum_{n=0}^{\infty} x(n) z^{-n} 
+    \end{align}
 
 For the sequence $t_n = 8 - 6n$ when $n > 0$, we can write:
 
-\[ T(z) = \sum_{n=1}^{\infty} (8 - 6n)z^{-n} \]
+    \begin{align}
+    T(z) = \sum_{n=1}^{\infty} (8 - 6n)z^{-n}
+    \end{align}
 
 Now, let's manipulate this expression. We can split it into two parts:
-
-\[ T(z) = \sum_{n=1}^{\infty} 8z^{-n} - \sum_{n=1}^{\infty} 6nz^{-n} \]
-
+    \begin{align}
+     T(z) = \sum_{n=1}^{\infty} 8z^{-n} - \sum_{n=1}^{\infty} 6nz^{-n} 
+    \end{align}
+    
 \begin{enumerate}
 
     \item 
@@ -147,30 +155,42 @@ Now, let's manipulate this expression. We can split it into two parts:
     \implies \sum_{n=1}^{\infty}6nz^{-n}&=\frac{6z^{-1}}{(1-z^{-1})^{2}}
     \end{align}
 \end{enumerate}
-\vspace{1cm}
-\[T(z)=\frac{8z^{-1}}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}\]
+    \begin{align}
+    T(z)=\frac{8z^{-1}}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}
+    \end{align}\
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1.0\linewidth]{Figure_1.png}
-    \[Fig. 1\hspace{2mm}x(n) = 8 - 6n\]
-\end{figure}
+The function $f(n) = 8 - 6n$ using step function is defined as follows:
 
-Given that \( n > 0 \), let's analyze the ROC for the Z-transform of the sequence \( x[n] = 8 - 6n \):
+\[f(n) = 
+\begin{cases}
+    8 - 6n, & \text{if } n \geq 0 \\
+    0, & \text{if } n < 0
+\end{cases}\]
 
-\[X(z) = \sum_{n=1}^{\infty} (8 - 6n) \cdot z^{-n}\]
 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\linewidth]{Figs/Fig1.png}
+        \caption{graph of x(n) = 8 - 6n}
+        \label{8 - 6n dicrete function}
+    \end{figure}
+
+Given that \( n > 0 \), let's analyze the ROC for the Z-transform of the sequence $x(n) = 8 - 6n$:
+    \begin{align}
+    X(z) = \sum_{n=1}^{\infty} (8 - 6n) \cdot z^{-n}
+    \end{align}
 For convergence, the series 
-\vspace{2mm}
-\[\sum_{n=1}^{\infty} (8 - 6n) \cdot |z|^{-n}\]
+    \begin{align}
+    \sum_{n=1}^{\infty} (8 - 6n) \cdot |z|^{-n}
+    \end{align}
 
 \vspace{2mm}
-must converge. This implies that \( |z| \) should be greater than the magnitude of the terms \( (8 - 6n) \). The terms \( (8 - 6n) \) decrease in magnitude as \( n \) increases, so the ROC is the set of complex numbers \( z \) such that \( |z| \) is greater than the magnitude of the terms for all \( n \).
-\vspace{2mm}
+must converge. This implies that \( |z| \) should be greater than the magnitude of the terms \( (8 - 6n) \).The terms \( (8 - 6n) \) decrease in magnitude as \( n \) increases, so the ROC is the set of complex numbers \( z \) such that \( |z| \) is greater than the magnitude of the terms for all \( n \).
 
+\vspace{2mm}
 In this case, the ROC is the region outside the circle with radius equal to the magnitude of the first term \( |8| \) in the series, i.e.; outside the circle \( |z| > 8 \).
-\vspace{2mm}
 
+\vspace{2mm}
 So, the Region of Convergence (ROC) for the Z-transform of the sequence \( x[n] = 8 - 6n \) with \( n > 0 \) is the exterior of the circle \( |z| > 8 \).
 
 \end{document}
