@@ -41,6 +41,7 @@
 \newcommand{\define}{\stackrel{\triangle}{=}}
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
+
 \begin{document}
 
 \bibliographystyle{IEEEtran}
@@ -64,31 +65,34 @@ In an A.P. the first term is 2 and the sum of the first five terms is one-fourth
 
 \section*{Solution}
 \begin{table}[h]
-  \centering
-  \begin{tabular}{|c|c|}
-    \hline
-    \textbf{Parameter} & \textbf{Value} \\
-    \hline
-    First term (\(x(1)\)) & 2 \\
-    \hline
-  \end{tabular}
-  \caption{Input data}
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+        First term (\(x(1)\)) & 2 \\
+        \hline
+        20\textsuperscript{th} term & -112\\
+        \hline
+    \end{tabular}
+    \caption{Input data}
   \label{Table 1}
 \end{table}
-   \begin{align}
-    T_1 + T_2 + T_3 + T_4 + T_5 = \frac{1}{4} [T_6 + T_7 + T_8 + T_9 + T_{10}]
-    \end{align}
-Let the zero\textsuperscript{th} term \(a\) and the common difference \(d\)
-\[[(a + d) + (a + 2d) + (a + 3d) + (a + 4d) + (a + 5d)] =\] 
-\[\frac{1}{4} [(a + 6d) + (a + 7d) + (a + 8d) + (a + 9d) + (a + 10d)]\]
 
+   \begin{align}
+        x_1 + x_2 + x_3 + x_4 + x_5 = \frac{1}{4} [x_6 + x_7 + x_8 + x_9 + x_{10}]
+    \end{align}
+Let the the common difference as \(d\)
+\[[x(0) + d + x(0) + 2d + x(0) + 3d + x(0) + 4d + x(0) + 5d)] =\]
+\[\frac{1}{4} [x(0) + 6d + x(0) + 7d + x(0) + 8d + x(0) + 9d + x(0) + 10d]\]
 
 Simplifying:
     \begin{align}
-    (5a + 15d) &= \frac{1}{4}(5a + 40d)\\
-    20a + 60d &= 5a + 40d\\
-    15a + 20d &= 0\\
-    3a + 4d &= 0 
+        5x(0) + 15d &= \frac{1}{4}(5x(0) + 40d)\\
+        20x(0) + 60d &= 5x(0) + 40d\\
+        15x(0) + 20d &= 0\\
+        3x(0) + 4d &= 0\\ 
+        \implies x(0) &= \frac{-4d}{3}
     \end{align}
 
     given x(1) = x(0) + d = 2
@@ -98,7 +102,6 @@ Simplifying:
         \implies d &= -6\\
         \implies x(0) &= 8
     \end{align}
-
     \begin{align}
         x(20)&=x(0)+20d\\
         &=8+20(-6) = -112
@@ -106,71 +109,71 @@ Simplifying:
 \centering
 $x(0) = 8\quad \text{and}\quad d = -6$
     \begin{align}
-    x(n)&=x(0)+nd\\
-    \implies x(n)&=8+(n)(-6)\\
-    \implies x(n)&=8-6n
+        x(n)&=x(0)+nd\\
+        \implies x(n)&=8+(n)(-6)\\
+        \implies x(n)&=8-6n
     \end{align}    
 The Z-transform of a sequence $x(n)$ is given by:
     \begin{align}
-    T(z) = \sum_{n=0}^{\infty} x(n) z^{-n} 
+        X(z) = \sum_{n=0}^{\infty} x(n) z^{-n} 
     \end{align}
 
-For the sequence $t_n = 8 - 6n$ when $n > 0$, we can write:
+For the sequence $x_n = 8 - 6n$ when $n > 0$, we can write:
 
     \begin{align}
-    T(z) = \sum_{n=1}^{\infty} (8 - 6n)z^{-n}
+        X(z) = \sum_{n=1}^{\infty} (8 - 6n)z^{-n}
+    \end{align}
+    \begin{align}
+         X(z) = \sum_{n=1}^{\infty} 8z^{-n} - \sum_{n=1}^{\infty} 6nz^{-n} 
     \end{align}
 
-Now, let's manipulate this expression. We can split it into two parts:
-    \begin{align}
-     T(z) = \sum_{n=1}^{\infty} 8z^{-n} - \sum_{n=1}^{\infty} 6nz^{-n} 
-    \end{align}
-    
 \begin{enumerate}
 
     \item 
-    \begin{align}\sum_{n=1}^{\infty} 8z^{-n} &= 8\sum_{n=1}^{\infty} z^{-n}\\
-    &=8(z^{-1}+z^{-2}+z^{-3}+\dots)\\
-    &=\frac{8z^{-1}}{1-z^{-1}}
+    \begin{align}
+        \sum_{n=1}^{\infty} 8z^{-n} &= 8\sum_{n=1}^{\infty} z^{-n}\\
+        &=8(z^{-1}+z^{-2}+z^{-3}+\dots)\\
+        &=\frac{8z^{-1}}{1-z^{-1}}
     \end{align}
     
     \item 
     \begin{align}
-    \sum_{n=1}^{\infty} 6nz^{-n} &= 6\sum_{n=1}^{\infty}nz^{-n}\\
-    &=6(1\cdot z^{-1} + 2\cdot z^{-2} + 3\cdot z^{-3} + \dots)
+        \sum_{n=1}^{\infty} 6nz^{-n} &= 6\sum_{n=1}^{\infty}nz^{-n}\\
+        &=6(1\cdot z^{-1} + 2\cdot z^{-2} + 3\cdot z^{-3} + \dots)
     \end{align}
     
     This is AGP.
     \begin{align}
-    S&=1\cdot z^{-1}+2\cdot z^{-2}+3\cdot z^{-3}+\dots\\
-    -\hspace{2mm}z^{-1}S&=\hspace{1.5cm}1\cdot z^{-2}+2\cdot z^{-3}+3\cdot z^{-4}+\dots
+        S&=1\cdot z^{-1}+2\cdot z^{-2}+3\cdot z^{-3}+\dots\\
+        -\hspace{2mm}z^{-1}S&=\hspace{1.5cm}1\cdot z^{-2}+2\cdot z^{-3}+3\cdot z^{-4}+\dots
     \end{align}
     
     \hrulefill
 
     \begin{align}
-    (1-z^{-1}S)&=z^{-1}+z^{-2}+z^{-3}+z^{-4}+\dots\\
-    (1-z^{-1})S&=\frac{z^{-1}}{1-z^{-1}}\\
-    S&=\frac{z^{-1}}{(1-z^{-1})^{2}}\\
-    \implies \sum_{n=1}^{\infty}6nz^{-n}&=\frac{6z^{-1}}{(1-z^{-1})^{2}}
+        (1-z^{-1}S)&=z^{-1}+z^{-2}+z^{-3}+z^{-4}+\dots\\
+        (1-z^{-1})S&=\frac{z^{-1}}{1-z^{-1}}\\
+        S&=\frac{z^{-1}}{(1-z^{-1})^{2}}\\
+        \implies \sum_{n=1}^{\infty}6nz^{-n}&=\frac{6z^{-1}}{(1-z^{-1})^{2}}
     \end{align}
 \end{enumerate}
     \begin{align}
-    T(z)=\frac{8z^{-1}}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}
+        X(z)=\frac{8z^{-1}}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}
     \end{align}\
 
 The function $f(n) = 8 - 6n$ using step function is defined as follows:
-
-\[f(n) = 
-\begin{cases}
-    8 - 6n, & \text{if } n \geq 0 \\
-    0, & \text{if } n < 0
-\end{cases}\]
+\begin{align}
+    f(n) = 
+    \begin{cases}
+        8 - 6n, & \text{if } n \geq 0 \\
+        0, & \text{if } n < 0
+    \end{cases}
+\end{align}
 
 
     \begin{figure}[h]
         \centering
-        \includegraphics[width=1\linewidth]{Figs/Fig1.png}
+        \includegraphics[width=1\linewidth]{figs/figure.png}
         \caption{graph of x(n) = 8 - 6n}
         \label{8 - 6n dicrete function}
     \end{figure}
