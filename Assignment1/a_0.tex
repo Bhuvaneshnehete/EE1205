@@ -70,50 +70,32 @@ In an A.P. the first term is 2 and the sum of the first five terms is one-fourth
    \begin{align}
         x_1 + x_2 + x_3 + x_4 + x_5 = \frac{1}{4} [x_6 + x_7 + x_8 + x_9 + x_{10}]
     \end{align}
-    
-Let the the common difference as \(d\)
+
 \[[x(0) + d + x(0) + 2d + x(0) + 3d + x(0) + 4d + x(0) + 5d)] =\]
 \[\frac{1}{4} [x(0) + 6d + x(0) + 7d + x(0) + 8d + x(0) + 9d + x(0) + 10d]\]
 
 Simplifying:
     \begin{align}
         5x(0) + 15d &= \frac{1}{4}(5x(0) + 40d)\\
-        20x(0) + 60d &= 5x(0) + 40d\\
-        15x(0) + 20d &= 0\\
-        3x(0) + 4d &= 0\\ 
         \implies x(0) &= \frac{-4d}{3}
     \end{align}
 
     given x(1) = x(0) + d = 2
     \begin{align}
         2 &= \frac{-4d}{3} +d\\
-        2 &= \frac{-d}{3}\\
-        \implies d &= -6\\
-        \implies x(0) &= 8
+        \implies d &= -6 \label{eq1}\\
+        \implies x(0) &= 8 \label{eq2}
     \end{align}
-    
     \begin{align}
         x(20)&=x(0)+20d\\
         &=8+20(-6) = -112
     \end{align}
-    
-\centering
-
-$x(0) = 8\quad \text{and}\quad d = -6$
-
+From \eqref{eq1} and \eqref{eq2}:
     \begin{align}
-        x(n)&=x(0)+nd\\
-        x(n)&=8+(n)(-6)\\
-        \implies x(n)&=8-6n
-    \end{align}    
-    
-The Z-transform of a sequence $x(n)$ is given by:
-
-    \begin{align}
-        X(z) = \sum_{n=0}^{\infty} x(n) z^{-n} 
+        \implies x(n)&=(8-6n)u(n)
     \end{align}
     
-For the sequence $x_n = 8 - 6n$ when $n > 0$, we can write:
+For the sequence $x_n = (8 - 6n)u(n)$ when $n > 0$, we can write:
 
     \begin{align}
         X(z) = \sum_{n=1}^{\infty} (8 - 6n)z^{-n}\\
@@ -122,25 +104,14 @@ For the sequence $x_n = 8 - 6n$ when $n > 0$, we can write:
         X(z)=\frac{8}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}
     \end{align}
 
-The function $f(n) = 8 - 6n$ using step function is defined as follows:
+\[ ROC : |z| > 1\]
 
-    \begin{align}
-        x(n) = 
-        \begin{cases}
-            8 - 6n, & \text{if } n \geq 0 \\
-            0, & \text{if } n < 0
-        \end{cases}
-    \end{align}
-    
     \begin{figure}[h]
         \centering
         \includegraphics[width=1\linewidth]{figs/Figure_1.png}
         \caption{graph of x(n) = 8 - 6n}
         \label{8 - 6n dicrete function}
     \end{figure}
-    
-\newpage
-Given that \( n > 0 \)
-\[\therefore ROC : |z| > 1\]
+
     
 \end{document}
