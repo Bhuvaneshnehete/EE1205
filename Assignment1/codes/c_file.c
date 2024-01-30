@@ -1,4 +1,12 @@
-#include <stdio.h>
+#include<stdio.h>
+int ap_values(int a, int n, int d){
+    if(n>=0){
+        return a + n*d;
+    }
+    else{
+        return 0;
+    }
+}
 
 int main() {
     FILE *file = fopen("data.txt", "w");
@@ -8,21 +16,17 @@ int main() {
     }
 
     // Discrete values for n
-    for (int n = -10; n < 10; ++n) {
-        // Compute the corresponding y value using piecewise function
-        double y;
-        if (n < 0) {
-            y = 0;
-        } else {
-            y = 2 - 6 * n;
+    for (int n = -3; n < 20; n++) {
+        int k;
+        k = ap_values(2, n, -6);
+        if(n!=19){
+            fprintf(file, "%d ", k);
         }
-
-        // Write n and y values to the file
-        fprintf(file, "%d %lf\n", n, y);
+        else{
+            fprintf(file, "%d", k);
+        }
     }
 
     // Close the file
     fclose(file);
-
-    return 0;
 }

@@ -67,42 +67,47 @@ In an A.P. the first term is 2 and the sum of the first five terms is one-fourth
 
 \input{tables/table}
 
+General term can be written as
+\begin{align}
+    x\brak{n} = \brak{x\brak{0} + nd}u\brak{n}
+\end{align}
+The corresponding Z-transform can be written as 
+\begin{align}
+    X\brak{Z} = \frac{x\brak{0}}{1 - Z^{-1}} + \frac{dZ^{-1}}{\brak{1 - Z^{-1}}^{2}} \label{eq2}
+\end{align}
+Given, 
    \begin{align}
-        x_0 + x_1 + x_2 + x_3 + x_4 = \frac{1}{4} [x_5 + x_6 + x_7 + x_8 + x_9]
-    \end{align}
-
-\[[x(0) + x(0) + d + x(0) + 2d + x(0) + 3d + x(0) + 4d)] =\]
-\[\frac{1}{4} [x(0) + 5d + x(0) + 6d + x(0) + 7d + x(0) + 8d + x(0) + 9d]\]
+       \sum_{n=0}^{4}x\brak{n} = \frac{1}{4}\sum_{n=5}^{9}x\brak{n}
+   \end{align}
 
 Simplifying:
     \begin{align}
-        5x(0) + 10d &= \frac{1}{4}(5x(0) + 35d)\\
-        \implies x(0) &= \frac{-d}{3}\\
+        5x\brak{0} + 10d &= \frac{1}{4}(5x\brak{0} + 35d)\\
+        \implies x\brak{0} &= \frac{-d}{3}\\
         \implies d &= -6 \label{eq1}
     \end{align}
+    From \eqref{eq1} and \tabref{input data}
     \begin{align}
-        x(19)&=x(0)+19d\\
+        x(19)&=x\brak{0}+19d\\
         &=2+19(-6) = -112
     \end{align}
 From \eqref{eq1} and \tabref{input data}:
     \begin{align}
-        \implies x(n)&=(2-6n)u(n)
+        \implies x\brak{n}&=(2-6n)u\brak{n} \label{eq3}
     \end{align}
     
-The Z-transform of x(n) :
+From \eqref{eq2} and \eqref{eq3} :
     \begin{align}
-        X(z) = \sum_{n=1}^{\infty} (2 - 6n)z^{-n}\\
-        X(z) = \sum_{n=1}^{\infty} 2z^{-n} - \sum_{n=1}^{\infty} 6nz^{-n}\\
-        X(z) = 2U(z) + 6(-z)\frac{d}{dz} U(z)\\
-        X(z)=\frac{2}{1-z^{-1}}+\frac{6z^{-1}}{(1-z^{-1})^{2}}
+        X(Z)=\frac{2}{1-Z^{-1}} - \frac{6Z^{-1}}{(1-Z^{-1})^{2}}
     \end{align}
 
-\[ ROC : |z| > 1\]
+\[ ROC : |Z| > 1\]
 
     \begin{figure}[h]
+    \renewcommand\thefigure{1}
         \centering
-        \includegraphics[width=1\linewidth]{figs/Figure_1}
-        \caption{graph of x(n) = 2 - 6n}
+        \includegraphics[width=1\linewidth]{figs/Figure_1.png}
+        \caption{graph of x\brak{n} = 2 - 6n}
     \end{figure}
 
     
