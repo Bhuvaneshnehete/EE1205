@@ -73,7 +73,7 @@ General term can be written as
 \end{align}
 The corresponding Z-transform can be written as 
 \begin{align}
-    X\brak{Z} = \frac{x\brak{0}}{1 - Z^{-1}} + \frac{dZ^{-1}}{\brak{1 - Z^{-1}}^{2}} \label{eq2}
+    X\brak{z} = \frac{x\brak{0}}{1 - z^{-1}} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{2}} \label{eq2}
 \end{align}
 Given, 
    \begin{align}
@@ -89,7 +89,8 @@ Simplifying:
     From \eqref{eq1} and \tabref{input data}
     \begin{align}
         x(19)&=x\brak{0}+19d\\
-        &=2+19(-6) = -112
+        &=2+19(-6)\\ 
+        &= -112
     \end{align}
 From \eqref{eq1} and \tabref{input data}:
     \begin{align}
@@ -98,10 +99,8 @@ From \eqref{eq1} and \tabref{input data}:
     
 From \eqref{eq2} and \eqref{eq3} :
     \begin{align}
-        X(Z)=\frac{2}{1-Z^{-1}} - \frac{6Z^{-1}}{(1-Z^{-1})^{2}}
+        X(z)=\frac{2}{1-z^{-1}} - \frac{6z^{-1}}{(1-z^{-1})^{2}} \quad |z|>1
     \end{align}
-
-\[ ROC : |Z| > 1\]
 
     \begin{figure}[h]
     \renewcommand\thefigure{1}
@@ -110,5 +109,4 @@ From \eqref{eq2} and \eqref{eq3} :
         \caption{graph of x\brak{n} = 2 - 6n}
     \end{figure}
 
-    
 \end{document}
