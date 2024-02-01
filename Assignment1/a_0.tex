@@ -59,11 +59,11 @@
 
 \bibliographystyle{IEEEtran}
 
-\section*{Question}
+\textbf{Question:}
 
 In an A.P. the first term is 2 and the sum of the first five terms is one-fourth of the next five terms. Show that 20\textsuperscript{th} term is $-112$.
 
-\section*{Solution}
+\solution
 
 \input{tables/table}
 
@@ -75,8 +75,9 @@ The corresponding Z-transform can be written as
 \begin{align}
     X\brak{z} = \frac{x\brak{0}}{1 - z^{-1}} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{2}} \label{eq2}
 \end{align}
+S\brak{n} is the sum of terms from 0 to n,
     \begin{align}
-        S\brak{n} &= x\brak{x} * u\brak{n}\\
+        S\brak{n} &= x\brak{n} * u\brak{n}\\
         S\brak{n-p} &= x\brak{n} * u\brak{n-p}
     \end{align}
 On Z-transforming,
@@ -89,16 +90,17 @@ On inverse Z-transforming,
     \begin{align}
         S\brak{n} &= \oint_{C} S\brak{z}z^{n-1}dz\\
         \implies S\brak{n} &= \oint_{C} \brak{\frac{x\brak{0}}{\brak{1 - z^{-1}}^2} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{3}}} z^{n-1} dz\\
-        \implies S\brak{n} &= \oint_{C} \frac{x\brak{0}z^{2}\brak{z-1}+dz^{2}}{\brak{z-1}^{3}}z^{n-1}dz
+        \implies S\brak{n} &= \oint_{C} \frac{x\brak{0}z^{2}\brak{z-1}+dz^{2}}{\brak{z-1}^{3}}z^{n-1}dz \label{eq4}
     \end{align}
 Using the property, 
     \begin{align}
         f\brak{z_0} &= \oint_{C} \frac{f\brak{z}}{z-z_0}dz\\
         f'\brak{z_0} &= \oint_{C} \frac{f\brak{z}}{\brak{z-z_0}^{2}}dz\\
-        f''\brak{z_0} &= 2\oint_{C} \frac{f\brak{z}}{\brak{z-z_0}^{3}}dz
+        f''\brak{z_0} &= 2\oint_{C} \frac{f\brak{z}}{\brak{z-z_0}^{3}}dz \label{eq5}
     \end{align}
-On comparison, 
+On comparison of \eqref{eq4} and \eqref{eq5}
     \begin{align}
+        f''\brak{z_0} &= 2S\brak{n}\\
         f\brak{z} &= \brak{x\brak{0}z^2\brak{z-1}+dz^2}z^{n-1}\\
         z_0 &= 1\\
         \implies S\brak{n} &= x\brak{0}\brak{n+1} + \frac{n\brak{n+1}}{2}d
@@ -112,13 +114,12 @@ Simplifying:
     \begin{align}
         S\brak{4} &= \frac{1}{4}\brak{S\brak{9}-S\brak{4}}\\
         5x\brak{0} + 10d &= \frac{1}{4}\brak{5x\brak{0} + 35d}\\
-        \implies x\brak{0} &= \frac{-d}{3}\\
+        x\brak{0} &= \frac{-d}{3}\\
         \implies d &= -6 \label{eq1}
     \end{align}
     From \eqref{eq1} and \tabref{input data}
     \begin{align}
-        x\brak{19}&=x\brak{0}+19d\\
-        &=2+19\brak{-6}\\ 
+        x\brak{19}&=x\brak{0}+19d\\ 
         &= -112
     \end{align}
 From \eqref{eq1} and \tabref{input data}:
