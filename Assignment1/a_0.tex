@@ -77,8 +77,8 @@ The corresponding Z-transform can be written as
 \end{align}
 Y\brak{n} is the sum of terms from 0 to n,
     \begin{align}
-        Y\brak{n} &= x\brak{n} * u\brak{n}\\
-        Y\brak{n-p} &= x\brak{n} * u\brak{n-p}
+        y\brak{n} &= x\brak{n} * u\brak{n}\\
+        y\brak{n-p} &= x\brak{n} * u\brak{n-p}
     \end{align}
 On taking Z-transform,
     \begin{align}
@@ -86,11 +86,11 @@ On taking Z-transform,
         Y\brak{z} &= \brak{\frac{x\brak{0}}{1 - z^{-1}} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{2}}}\frac{1}{1-z^{-1}}\\
         Y\brak{z} &= \brak{\frac{x\brak{0}}{\brak{1 - z^{-1}}^2} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{3}}}
     \end{align}
-On inverse Z-transforming, 
+On taking inverse Z-transform, 
     \begin{align}
         Y\brak{n} &= \oint_{C} Y\brak{z}z^{n-1}dz
     \end{align}
-On taking inverse z-transform,
+On using contour integral,
     \begin{align}
         Y\brak{n} &= x\brak{0}\brak{n+1} + \frac{n\brak{n+1}}{2}d
     \end{align}
