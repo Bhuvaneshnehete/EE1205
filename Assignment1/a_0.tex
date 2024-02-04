@@ -64,64 +64,42 @@
 In an A.P. the first term is 2 and the sum of the first five terms is one-fourth of the next five terms. Show that 20\textsuperscript{th} term is $-112$.
 
 \solution
-
 \input{tables/table}
 
 General term can be written as
 \begin{align}
     x\brak{n} = \brak{x\brak{0} + nd}u\brak{n}
 \end{align}
-The corresponding Z-transform can be written as 
-\begin{align}
-    X\brak{z} = \frac{x\brak{0}}{1 - z^{-1}} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{2}} \label{eq2}
-\end{align}
-Y\brak{n} is the sum of terms from 0 to n,
+y\brak{n} is the sum upto n terms,
     \begin{align}
-        y\brak{n} &= x\brak{n} * u\brak{n}\\
-        y\brak{n-p} &= x\brak{n} * u\brak{n-p}
-    \end{align}
-On taking Z-transform,
-    \begin{align}
-        Y\brak{z} &= X\brak{z}U\brak{z}\\
-        Y\brak{z} &= \brak{\frac{x\brak{0}}{1 - z^{-1}} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{2}}}\frac{1}{1-z^{-1}}\\
-        Y\brak{z} &= \brak{\frac{x\brak{0}}{\brak{1 - z^{-1}}^2} + \frac{dz^{-1}}{\brak{1 - z^{-1}}^{3}}}
-    \end{align}
-On taking inverse Z-transform, 
-    \begin{align}
-        Y\brak{n} &= \oint_{C} Y\brak{z}z^{n-1}dz
-    \end{align}
-On using contour integral,
-    \begin{align}
-        Y\brak{n} &= x\brak{0}\brak{n+1} + \frac{n\brak{n+1}}{2}d
+        y\brak{n} &= x\brak{0}\brak{n+1} + \frac{n\brak{n+1}}{2}d
     \end{align}
 Given, 
    \begin{align}
        \sum_{n=0}^{4}x\brak{n} = \frac{1}{4}\sum_{n=5}^{9}x\brak{n}
    \end{align}
-
 Simplifying:
     \begin{align}
-        Y\brak{4} &= \frac{1}{4}\brak{Y\brak{9}-Y\brak{4}}\\
-        5x\brak{0} + 10d &= \frac{1}{4}\brak{5x\brak{0} + 35d}\\
+        y\brak{4} &= \frac{1}{4}\brak{y\brak{9}-y\brak{4}}\\
+        \implies 5x\brak{0} + 10d &= \frac{1}{4}\brak{5x\brak{0} + 35d}\\
         x\brak{0} &= \frac{-d}{3}\\
         \implies d &= -6 \label{eq1}
     \end{align}
-    From \eqref{eq1} and \tabref{input data}
+From \eqref{eq1} and \tabref{input data}
     \begin{align}
         x\brak{19}&=x\brak{0}+19d\\ 
         &= -112
-    \end{align}
+   \end{align} 
 From \eqref{eq1} and \tabref{input data}:
     \begin{align}
         \implies x\brak{n}&=\brak{2-6n}u\brak{n} \label{eq3}
-    \end{align}
-    
-From \eqref{eq2} and \eqref{eq3} :
+    \end{align}    
+From \eqref{eq3} :
     \begin{align}
         X\brak{z}=\frac{2}{1-z^{-1}} - \frac{6z^{-1}}{\brak{1-z^{-1}}^{2}} \quad |z|>1
     \end{align}
 
-    \begin{figure}[h]
+    \begin{figure}[ht]
     \renewcommand\thefigure{1}
         \centering
         \includegraphics[width=1\linewidth]{figs/Figure_1.png}
