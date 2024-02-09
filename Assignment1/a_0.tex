@@ -70,22 +70,19 @@ General term can be written as
 \begin{align}
     x\brak{n} = \brak{x\brak{0} + nd}u\brak{n}
 \end{align}
-For n=0 to n=4,
+By refereing \eqref{eq:apz}
 \begin{align}
-    y\brak{n} &= x\brak{n} * u\brak{n}\label{eq4}\\
-    \implies Y\brak{z} &= X\brak{z} U \brak{z}\\
-    Y\brak{z} &= \frac{x\brak{0}}{\brak{1-z^{-1}}^2} + \frac{dz^{-1}}{\brak{1-z^{-1}}^3}
+    X(z) &= \frac{x(0)}{1-z^{-1}} + \frac{dz^{-1}}{(1-z^{-1})^{2}}
 \end{align}
-For n=5 to n=9,
+Taking the inverse Z-transform by contour integration by refering \eqref{eq:APSum},
 \begin{align}
-    y\brak{n+5} &= x\brak{n+5} * u\brak{n}\label{eq2}\\
-    \implies Y\brak{z} &= X\brak{z} U \brak{z}\\
-    Y\brak{z} &= \frac{\brak{x\brak{0}+4d}}{\brak{1-z^{-1}}^2} + \frac{dz^{-1}}{\brak{1-z^{-1}}^3}\\
+    y(n) &= x(0)\sbrak{(n + 1)u(n)} + \frac{d}{2}\sbrak{n(n + 1)u(n)}\\
+    &= \frac{n+1}{2}\cbrak{2x(0) + nd}u(n)
 \end{align}
-On taking inverse Z-transform and substituting n=4
+Therefore, 
 \begin{align}
-    y\brak{4} &= 5x\brak{0} + 10d\\
-    y\brak{9} &= 10x\brak{0} + 45d
+    y\brak{4}=5x\brak{0}+10d\\
+    y\brak{9}=10x\brak{0}+45d
 \end{align}
 Given, 
    \begin{align}
@@ -100,12 +97,12 @@ Simplifying:
     \end{align}
 From \eqref{eq1} and \tabref{input data}
     \begin{align}
+        \implies x\brak{n}&=\brak{2-6n}u\brak{n} \label{eq3}
+   \end{align} 
+From \eqref{eq3}:
+    \begin{align}
         x\brak{19}&=x\brak{0}+19d\\ 
         &= -112
-   \end{align} 
-From \eqref{eq1} and \tabref{input data}:
-    \begin{align}
-        \implies x\brak{n}&=\brak{2-6n}u\brak{n} \label{eq3}
     \end{align}    
 From \eqref{eq3} :
     \begin{align}
