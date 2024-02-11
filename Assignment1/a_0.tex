@@ -70,9 +70,9 @@ General term can be written as
 \begin{align}
     x\brak{n} = \brak{x\brak{0} + nd}u\brak{n}
 \end{align}
-By refereing \eqref{eq:apz}
+By referreing \eqref{eq:apz}
 \begin{align}
-    X(z) &= \frac{x(0)}{1-z^{-1}} + \frac{dz^{-1}}{(1-z^{-1})^{2}}
+    X(z) &= \frac{x(0)}{1-z^{-1}} + \frac{dz^{-1}}{(1-z^{-1})^{2}}\label{eq2}
 \end{align}
 Taking the inverse Z-transform by contour integration by refering \eqref{eq:APSum},
 \begin{align}
@@ -95,16 +95,16 @@ Simplifying:
         x\brak{0} &= \frac{-d}{3}\\
         \implies d &= -6 \label{eq1}
     \end{align}
-From \eqref{eq1} and \tabref{input data}
+From \eqref{eq1} and \tabref{input data}:
     \begin{align}
-        \implies x\brak{n}&=\brak{2-6n}u\brak{n} \label{eq3}
+        x\brak{n}&=\brak{2-6n}u\brak{n} \label{eq3}
    \end{align} 
 From \eqref{eq3}:
     \begin{align}
         x\brak{19}&=x\brak{0}+19d\\ 
         &= -112
     \end{align}    
-From \eqref{eq3} :
+From \eqref{eq3} and \eqref{eq2}:
     \begin{align}
         X\brak{z}=\frac{2}{1-z^{-1}} - \frac{6z^{-1}}{\brak{1-z^{-1}}^{2}} \quad |z|>1
     \end{align}
