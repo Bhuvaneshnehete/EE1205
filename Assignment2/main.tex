@@ -70,7 +70,11 @@ A man deposited Rs 10000 in a bank at the rate of 5\% simple interest anually. F
 \end{align}
 From \eqref{eq1} and \tabref{tab:Input data}:
     \begin{align}
-        x(n) &= (10000 + 500n)u(n)
+	    x(n) &= (10000 + 500n)u(n)\label{eq2}
+    \end{align}
+From \eqref{eq2}
+    \begin{align}
+        X(z) &= \frac{10000}{1-z^{-1}} + \frac{500z^{-1}}{(1-z^{-1})^2} \quad |z|>1
     \end{align}
 Amount in 15\textsuperscript{th} year is
     \begin{align}
@@ -81,10 +85,6 @@ Total amount after 20 years is
     \begin{align}
         x(20) &= x(0) + 20\times 500\\
         \implies x(20) &= 20000
-    \end{align}
-From \eqref{eq1}
-    \begin{align}
-        X(z) &= \frac{10000}{1-z^{-1}} + \frac{500z^{-1}}{(1-z^{-1})^2} \quad |z|>1
     \end{align}
     \begin{figure}[h]
     \renewcommand\thefigure{1}
