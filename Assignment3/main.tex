@@ -1,0 +1,83 @@
+% \iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE EE23 27}
+\author{EE23BTECH11043 - BHUVANESH SUNIL NEHETE$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\bibliographystyle{IEEEtran}
+
+\textbf{Question:}
+Which of the following statement(s) is/are true?
+\begin{enumerate}[label=\alph*)]
+    \item If an LTI system is causal, it is stable
+    \item A discrete time LTI system is causal if and only if its response to a step input $u[n]$ is 0 for $n < 0$
+    \item If a discrete time LTI system has an impulse response $h[n]$ of finite duration the system is stable
+    \item If the impulse response $0<|h[n]|<1$ for all $n$, then the LTI system is stable.
+\end{enumerate}
+
+\solution
+\begin{enumerate}
+    \item A system is said to be causal if its output at any given time depends only on past and present inputs, not future inputs. Mathematically, a system is causal if its impulse response is zero for negative time.\\
+    On the other hand, a system is considered stable if its output remains bounded for bounded inputs.\\
+    So, it is not always necessary for an LTI system if it is causal, then is stable.
+    \item In discrete-time signal processing, a system is considered causal if the output at any time depends only on the current and past inputs, not future inputs. This means that the response of the system to a step input (a signal that is zero for negative time indices and unity for non-negative time indices) should also be zero for negative time indices if the system is causal.\\
+    Conversely, if the response to a step input is non-zero for negative time indices, it implies that the system is anticipating future inputs, which violates the causality principle.\\
+    So, a discrete-time LTI system is causal if and only if its response to a step input $u[n]$ is 0 for $n<0$.
+    \item system is said to be stable if it follows BIBO rule (output should be bounded for bounded input) but in option \brak{C} output of h[n] is not defined, so it not necessarily to be stable.
+    \item system is said to be stable if it follows BIBO rule (output should be bounded for bounded input) but in option \brak{D} range of n is not defined, so it is not necessarily to be stable.
+\end{enumerate}
+
+\end{document}
