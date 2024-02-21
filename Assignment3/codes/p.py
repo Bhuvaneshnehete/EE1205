@@ -41,3 +41,16 @@ plt.ylabel("g(n)")
 plt.grid(True)
 plt.savefig('p2.jpeg')
 plt.show()
+
+data4_file = 'data34.txt'
+data = np.loadtxt(data4_file)
+
+n_values = data[:, 0]
+y_values = data[:, 1]
+
+plt.stem(n_values, y_values, linefmt='b-', markerfmt='bo')
+plt.xlabel("n")
+plt.ylabel("y(n)")
+plt.grid(True)
+plt.savefig('p3.jpeg')
+plt.show()
