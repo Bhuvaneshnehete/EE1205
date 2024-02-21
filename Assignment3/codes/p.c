@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
-int ap_values(int n){
+int values(int n){
         return pow(2,n) * (n >= 0);
 }
 
@@ -13,7 +13,7 @@ int main() {
     }
 
     for (int n = -5; n <= 10; n++) {
-            fprintf(file, "%d     %d \n", n, ap_values(n));
+            fprintf(file, "%d     %d \n", n, values(n));
     }
     
     fclose(file); 

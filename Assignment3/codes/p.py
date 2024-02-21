@@ -12,7 +12,6 @@ y_values = data[:, 1]
 plt.stem(n_values, y_values, linefmt='b-', markerfmt='bo')
 plt.xlabel("n")
 plt.ylabel("x(n)")
-plt.title("$x(n)=2^n$")
 plt.grid(True)
 plt.savefig('p.jpeg')
 plt.show()
@@ -25,8 +24,7 @@ y_values = data[:, 1]
 
 plt.stem(n_values, y_values, linefmt='b-', markerfmt='bo')
 plt.xlabel("n")
-plt.ylabel("x(n)")
-plt.title("$x(n)$")
+plt.ylabel("y(n)")
 plt.grid(True)
 plt.savefig('p1.jpeg')
 plt.show()
@@ -39,8 +37,7 @@ y_values = data[:, 1]
 
 plt.stem(n_values, y_values, linefmt='b-', markerfmt='bo')
 plt.xlabel("n")
-plt.ylabel("x(n)")
-plt.title("$x(n)$")
+plt.ylabel("g(n)")
 plt.grid(True)
 plt.savefig('p2.jpeg')
 plt.show()

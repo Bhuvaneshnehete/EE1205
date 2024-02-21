@@ -69,14 +69,15 @@ Which of the following statement(s) is/are true?
 \end{enumerate}
 \solution
 \begin{enumerate}
-    \item Let's take an impulse signal $h\sbrak{n}=2^nu\sbrak{n}$\\
-    Assume $y\sbrak{n}=h\sbrak{n}*x\sbrak{n}$
+    \item
     \begin{align}
+        \text{Assume}\quad h\sbrak{n}&=2^nu\sbrak{n}\\
+        y\sbrak{n}&=h\sbrak{n}*x\sbrak{n}\\
         Y\sbrak{Z}&=h\sbrak{Z} X\sbrak{Z}\\
         Y\sbrak{Z}&=\left(\frac{1}{1-2Z^{-1}}\right)X\sbrak{Z}\\
         H\sbrak{Z}&=\frac{1}{1-2Z^{-1}}\quad     |Z|\geq 2
     \end{align}
-    It is causal because it only depends on present or past inputs. But it is not stable because ROC is not in unit circle.
+    Tis system is causal but not stable because ROC is not in unit circle.
     
     \begin{figure}[ht]
     \renewcommand\thefigure{1}
@@ -85,26 +86,22 @@ Which of the following statement(s) is/are true?
         \caption{graph of $x\brak{n} = 2^nu\sbrak{n}$}
     \end{figure}
     Therefore, this statement does not hold true.
-    \item In discrete-time signal processing, a system is considered causal if the output at any time depends only on the current and past inputs, not future inputs. This means that the response of the system to a step input should also be zero for negative time indices if the system is causal.\\
-    Conversely, if the response to a step input is non-zero for negative time indices, it implies that the system is anticipating future inputs, which violates the causality principle.\\
-    So, a discrete-time LTI system is causal if and only if its response to a step input $u[n]$ is 0 for $n<0$.\\
+    \item In discrete-time LTI system, if the response to step input signal signal is non zero, for $n<0$ then the principal of causality in not followed.
     Therefore, this statement is true.
     \item Let's take an impulse signal.
     \begin{align}
-            h\sbrak{n} = \begin{cases} 
+            \text{Assume}\quad h\sbrak{n} &= \begin{cases} 
                 1 & n = 0 \\
                 -2 & n = 1 \\
               0 & \text{otherwise}
-        \end{cases}
-    \end{align}
-    Assume $y\sbrak{n}=h\sbrak{n}*u\sbrak{n}$
-    \begin{align}
-        y\sbrak{n} = \begin{cases}
+        \end{cases}\\
+        y\sbrak{n}&=h\sbrak{n}*u\sbrak{n}\\
+        y\sbrak{n} &= \begin{cases}
             1 & n=0\\
-            1 & n\geq1
+            -1 & n\geq1
         \end{cases}
     \end{align}
-    The output never go back to zero. As per the condition for stability the output should be bounded for bounded input.
+    The input response is finite but the output response in not BIBO stable.
     
     \begin{figure}[h!]
     \renewcommand\thefigure{1}
@@ -113,10 +110,12 @@ Which of the following statement(s) is/are true?
         \caption{graph of $y\sbrak{n}$}
     \end{figure}
     Therefore, this statement does not hold true.
-    \item Let's take an impulse signal $h\sbrak{n}=\frac{1}{2}u\sbrak{n}$\\
+    \item
     \begin{align}
-        g\sbrak{n}=\sum_{n=0}^{\infty}|h[n]|&=\sum_{n=0}^{\infty}\frac{1}{2}\\
-        \implies\sum_{n=0}^{\infty}|h[n]|&\rightarrow \infty
+        \text{Assume}\quad h\sbrak{n}&=\frac{1}{2}u\sbrak{n}\\
+        g\sbrak{n}&=\sum_{n=0}^{\infty}|h[n]|\\
+       &=\sum_{n=0}^{\infty}\frac{1}{2}\\
+        \implies\sum_{n=0}^{\infty}&|h[n]|\rightarrow \infty
     \end{align}
     Hence it is unstable.
     
@@ -131,4 +130,4 @@ Which of the following statement(s) is/are true?
 So, the answer is option \brak{B}.
 
 \end{document}
--
+ 
