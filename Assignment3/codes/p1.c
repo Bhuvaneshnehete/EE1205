@@ -2,19 +2,20 @@
 
 int main() {
     FILE *fp;
-    fp = fopen("data32.txt", "w");
+    int n;
     
+    fp = fopen("data32.txt", "w");
     if (fp == NULL) {
         printf("Error opening file!\n");
         return 1;
     }
     
-    int n;
-    for (n = 0; n <= 8; n++) {
-        if (n <= 0)
-            fprintf(fp, "%d %d\n", n, 1);
-        else if (n >= 1)
-            fprintf(fp, "%d %d\n", n, -1);
+    for (n = 0; n <= 10; n++) {
+        int y = 0;
+        for (int k = 0; k <= n; k++) {
+            y += k;
+        }
+        fprintf(fp, "%d  %d\n",n , y);
     }
     
     fclose(fp);

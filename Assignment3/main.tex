@@ -104,15 +104,12 @@ Which of the following statement(s) is/are true?
     \item
     \begin{align}
             \text{Assume}\quad h\sbrak{n} &= \begin{cases} 
-                1 & n = 0 \\
-                -2 & n = 1 \\
-              0 & \text{otherwise}
+                n & \text{if}\hspace{2mm}0 \leq n\leq N\\
+                0 & \text{otherwise} \\
         \end{cases}\\
         y\sbrak{n}&=h\sbrak{n}*u\sbrak{n}\\
-        y\sbrak{n} &= \begin{cases}
-            1 & n=0\\
-            -1 & n\geq1
-        \end{cases}
+        y\sbrak{n} &= \sum_{k=0}^nh\sbrak{k}u\sbrak{n-k}\\
+        &=\sum_{k=0}^nk
     \end{align}
     The input response is finite but the output response in not BIBO stable.
     
@@ -143,4 +140,4 @@ Which of the following statement(s) is/are true?
 So, the answer is option \brak{B}.
 
 \end{document}
-o
+e
