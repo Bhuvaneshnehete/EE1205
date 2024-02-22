@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.2)  21 FEB 2024 14:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.2.2)  22 FEB 2024 10:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,19 +1019,13 @@ tex
 ) (/usr/share/texlive/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-triangles.tex
 2022/01/19 4.03 tkz-obj-eu-triangles.tex
 )) (./gvv.sty
-
-! LaTeX cmd Error: Invalid argument type 'g' in command '\system' (requires
-(cmd)              xparse).
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.110 }
-       
-? 
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
 \c@matchleft=\count331
 \c@matchright=\count332
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
@@ -1264,17 +1258,20 @@ File: ts1txr.fd 2000/12/15 v3.1
 <figs/graph31.png, id=7, 462.528pt x 346.896pt>
 File: figs/graph31.png Graphic file (type png)
 <use figs/graph31.png>
-Package pdftex.def Info: figs/graph31.png  used on input line 85.
+Package pdftex.def Info: figs/graph31.png  used on input line 82.
 (pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 <figs/graph34.png, id=9, 462.528pt x 346.896pt>
 File: figs/graph34.png Graphic file (type png)
 <use figs/graph34.png>
-Package pdftex.def Info: figs/graph34.png  used on input line 103.
+Package pdftex.def Info: figs/graph34.png  used on input line 100.
 (pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
 <figs/graph32.png, id=10, 462.528pt x 346.896pt>
 File: figs/graph32.png Graphic file (type png)
 <use figs/graph32.png>
-Package pdftex.def Info: figs/graph32.png  used on input line 125.
+Package pdftex.def Info: figs/graph32.png  used on input line 122.
 (pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
 
 
@@ -1284,10 +1281,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
  <./figs/graph31.png> <./figs/graph34.png>]
-<figs/graph33.png, id=45, 462.528pt x 346.896pt>
+<figs/graph33.png, id=42, 462.528pt x 346.896pt>
 File: figs/graph33.png Graphic file (type png)
 <use figs/graph33.png>
-Package pdftex.def Info: figs/graph33.png  used on input line 141.
+Package pdftex.def Info: figs/graph33.png  used on input line 138.
 (pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
  [2
 
@@ -1296,11 +1293,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29600 strings out of 478287
- 583115 string characters out of 5849290
- 855693 words of memory out of 5000000
- 47127 multiletter control sequences out of 15000+600000
- 546436 words of font info for 198 fonts, out of 8000000 for 9000
+ 29656 strings out of 478287
+ 584607 string characters out of 5849290
+ 852005 words of memory out of 5000000
+ 47180 multiletter control sequences out of 15000+600000
+ 547752 words of font info for 200 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,16n,96p,408b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1310,10 +1307,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 114899 bytes).
+Output written on main.pdf (2 pages, 113844 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 31 named destinations out of 1000 (max. 500000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

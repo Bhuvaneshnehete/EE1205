@@ -17,7 +17,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-\usepackage{gvv}                                        
+\usepackage{gvv}
 \def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
@@ -71,19 +71,16 @@ Which of the following statement(s) is/are true?
 \begin{enumerate}
     \item
     \begin{align}
-        \text{Assume}\quad h\sbrak{n}&=2^nu\sbrak{n}\\
-        y\sbrak{n}&=h\sbrak{n}*x\sbrak{n}\\
-        Y\sbrak{Z}&=H\sbrak{Z} X\sbrak{Z}\\
-        &=\left(\frac{1}{1-2Z^{-1}}\right)X\sbrak{Z}\\
-        H\sbrak{Z}&=\frac{1}{1-2Z^{-1}}\quad     |Z|\geq 2
+        \text{Assume}\quad h\brak{t}&=e^{2t}\cdot u\brak{t}\\
+        \mathcal{L}\{e^{2t}\} &= \frac{1}{s-2}\quad Re\brak{s}>2
     \end{align}
-    Tis system is causal but not stable because ROC is not in unit circle.
+    This system is causal but not stable because ROC does not contian imaginary axis.
     
     \begin{figure}[ht]
     \renewcommand\thefigure{1}
         \centering
         \includegraphics[width=0.8\linewidth]{figs/graph31.png}
-        \caption{graph of $x\brak{n} = 2^nu\sbrak{n}$}
+        \caption{graph of $h\brak{t} = e^{2t}\cdot u\brak{t}$}
     \end{figure}
     Therefore, this statement does not hold true.
     \item
@@ -96,7 +93,7 @@ Which of the following statement(s) is/are true?
         y\sbrak{n}&=\sum_{k=-\infty}^{+\infty}h\sbrak{k}\cdot u\sbrak{n-k}\\
         &=\sum_{k=0}^{n}\brak{\frac{1}{3}}
     \end{align}
-    Therefore, in this example, the system's response to a step input is indeed $0$ for $n<0$, fulfilling condition for stability.\\
+    Therefore, in this example, the system's response to a step input is indeed $0$ for $n<0$, fulfilling condition for causality.\\
     \begin{figure}[h!]
     \renewcommand\thefigure{2}
         \centering
@@ -115,7 +112,7 @@ Which of the following statement(s) is/are true?
         y\sbrak{n} &= \begin{cases}
             1 & n=0\\
             -1 & n\geq1
-       \end{cases}
+        \end{cases}
     \end{align}
     The input response is finite but the output response in not BIBO stable.
     
@@ -146,4 +143,4 @@ Which of the following statement(s) is/are true?
 So, the answer is option \brak{B}.
 
 \end{document}
- 
+o
