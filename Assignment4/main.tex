@@ -71,11 +71,11 @@ Assuming $s>0$; Laplace transform for $f\brak{x} = sin\brak{ax}$ is
 \solution
 
 \begin{align}
-\text{We can write} \quad\sin\brak{ax}&=\frac{e^{ax}-e^{-ax}}{2i}\label{eq1}
+\mathcal{L}\brak{f\brak{x}}=\int_{-\infty}^{\infty}e^{-sx}f\brak{x}dx\\
+\text{We can write} \quad\sin\brak{ax}=\frac{e^{ax}-e^{-ax}}{2i}\label{eq1}
 \end{align}
 From \eqref{eq1}
 \begin{align}
-\mathcal{L}\brak{f\brak{x}}&=\int_{-\infty}^{\infty}e^{-sx}f\brak{x}dx\\
 \mathcal{L}\brak{\sin\brak{ax}}&=\int_{0}^{\infty}e^{-sx}\brak{\frac{e^{iax}-e^{-iax}}{2i}}dx\\
 &=\frac{1}{2i}\int_{0}^{\infty}e^{-x\brak{s-ia}}-e^{-x\brak{s+ia}}dx\\
 &=\frac{1}{2i}\brak{\frac{e^{-x\brak{s-ia}}}{-\brak{s-ia}}+\frac{e^{-x\brak{s+ia}}}{-\brak{s+ia}}}_{0}^{\infty}\\
