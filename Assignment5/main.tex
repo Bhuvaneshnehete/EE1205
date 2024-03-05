@@ -68,9 +68,12 @@ The number of non-zero output samples is \underline{\hspace{1cm}}.\\
 
 \solution
 \begin{align}
+    h\sbrak{n}=-\delta\sbrak{n}+2\delta\sbrak{n+1}-\delta\sbrak{n+2}
+\end{align}
+\begin{align}
     y\sbrak{n}&=x\sbrak{n}*h\sbrak{n}\\
-    &=x\sbrak{n}*\brak{-\delta\sbrak{n+1}+2\delta\sbrak{n}-\delta\sbrak{n-1}}\\
-    y\sbrak{n}&=-x\sbrak{n+1}+2x\sbrak{n}-x\sbrak{n-1}
+    &=x\sbrak{n}*\brak{-\delta\sbrak{n}+2\delta\sbrak{n+1}-\delta\sbrak{n+2}}\\
+    y\sbrak{n}&=-x\sbrak{n}+2x\sbrak{n+1}-x\sbrak{n+2}
 \end{align}
 
 \input{codes/yn}
