@@ -1,15 +1,32 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-n_values_discrete = np.arange(-3,21)
-y_values_discrete = np.loadtxt("data2.txt", delimiter=' ')
+#n_values_discrete = np.arange(-5,11)
 
-plt.stem(n_values_discrete, y_values_discrete, linefmt='b-', markerfmt='bo')
-plt.stem([14],[17000], 'ro', markerfmt='ro', basefmt='r')
-plt.stem([20],[20000], 'ro', markerfmt='ro', basefmt='r')
+data1_file = 'data31.txt'
+data = np.loadtxt(data1_file)
+
+n_values = data[:, 0]
+y_values = data[:, 1]
+
+plt.stem(n_values, y_values, linefmt='b-', markerfmt='bo')
 plt.xlabel("n")
 plt.ylabel("x(n)")
-plt.title("x(n)=10000+500n")
+plt.title("$x(n)=2^n$")
 plt.grid(True)
 plt.savefig('p.jpeg')
+plt.show()
 
+data2_file = 'data32.txt'
+data= np.loadtxt(data2_file)
+
+n_values = data[:, 0]
+y_values = data[:, 1]
+
+plt.stem(n_values, y_values, linefmt='b-', markerfmt='bo')
+plt.xlabel("n")
+plt.ylabel("x(n)")
+plt.title("$x(n)$")
+plt.grid(True)
+plt.savefig('p1.jpeg')
+plt.show()

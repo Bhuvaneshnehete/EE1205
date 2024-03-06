@@ -45,7 +45,6 @@ int main() {
     // Write the result to the file
     for (int i = 0; i < m + n - 1; i++) {
         fprintf(file, "%d\n", result[i]);
-        printf("%2d\n",result[i]);
     }
 
     // Close the file
