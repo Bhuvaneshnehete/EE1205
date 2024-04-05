@@ -4,7 +4,7 @@ from scipy import signal
 import numpy as np
 
 #read .wav file 
-input_signal, fs = sf.read('Dhanush-Singing.wav') 
+input_signal, fs = sf.read('BN.wav') 
 
 #sampling frequency of Input signal
 sampl_freq = fs
@@ -27,6 +27,8 @@ r, p, k = signal.residuez(b, a)
 print(r)
 print(p)
 print(k)
+print(a)
+print(b)
 
 
 #number of terms of the impulse response

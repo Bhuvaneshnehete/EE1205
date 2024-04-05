@@ -5,13 +5,13 @@ from scipy import signal
 
 
 #sampling frequency from the audio file
-sampl_freq=44100
+sampl_freq=48000
 T = 1.0/sampl_freq
 #order of the filter
 order=4
 
 #cutoff frquency 
-cutoff_freq=1000.0 
+cutoff_freq=5000.0 
 
 #digital frequency
 Wn=2*cutoff_freq/sampl_freq  

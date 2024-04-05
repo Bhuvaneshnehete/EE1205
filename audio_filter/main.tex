@@ -486,11 +486,11 @@ From \ref{eq:iir_filter_gen}
 \end{align}
 Difference Equation is given by :
 \begin{align}
-	&y(n) - \brak{3.66}y(n - 1) + \brak{5.05}y(n - 2) \nonumber \\
-	&- \brak{3.099}y(n - 3) + \brak{0.715}y(n - 4) \nonumber \\
-	&= \brak{1.45\times 10^{-5}}x(n) + \brak{5.74 \times 10^{-5}}x(n - 1) \nonumber \\
-	&+ \brak{8.62 \times 10^{-5}}x(n - 2) + \brak{5.74 \times 10^{-5}}x(n - 3) \nonumber \\
-	&+ \brak{1.43 \times 10^{-5}}x(n - 4)
+	&y(n) - \brak{3.65}y(n - 1) + \brak{5.03}y(n - 2) \nonumber \\
+	&- \brak{3.083}y(n - 3) + \brak{0.710}y(n - 4) \nonumber \\
+	&= \brak{1.45\times 10^{-5}}x(n) + \brak{6.22 \times 10^{-5}}x(n - 1) \nonumber \\
+	&+ \brak{9.33 \times 10^{-5}}x(n - 2) + \brak{6.22 \times 10^{-5}}x(n - 3) \nonumber \\
+	&+ \brak{1.55 \times 10^{-5}}x(n - 4)
 \end{align}
 From \eqref{eq:iir_filter_gen} 
 \begin{align}
@@ -569,55 +569,18 @@ https://github.com/Bhuvaneshnehete/EE1205/blob/main/audio_filter/codes/6.2_pole-
 \label{fig:6.2_hn}
 \end{figure}
 
-
-\item Implement your own fft routine in C and call this fft in python.\\
-
-\solution The below C code computes FFT of a given sequence.
-\begin{lstlisting}
-https://github.com/Bhuvaneshnehete/EE1205/blob/main/audio_filter/codes/fft.c
-\end{lstlisting}
-The C function involved in computing the FFT is called in the below python code and the result is computed.\\
-
-Before executing the  python code. Execute the following command.
-\begin{lstlisting}
-gcc -shared -o fft.so -fPIC fft.c
-\end{lstlisting}
-
-\begin{lstlisting}
-https://github.com/Bhuvaneshnehete/EE1205/blob/main/audio_filter/codes/fft_python.py
-\end{lstlisting}
-
-\item Find the time complexities of computing y(n)
-using FFT/IFFT and convolution and Compare.\\
-\solution  The time required to compute y(n) using these two methods is calculated and the data is stored in a text file using the below C code.
-
-\begin{lstlisting}
-https://github.com/Bhuvaneshnehete/EE1205/blob/main/audio_filter/codes/6.4_time.c
-\end{lstlisting}
-The below python code extracts the data from these text files and plots Time vs $n$ for comparison.
-\begin{lstlisting}
-https://github.com/Bhuvaneshnehete/EE1205/blob/main/audio_filter/codes/6.4_plot.py
-\end{lstlisting}
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\columnwidth]{figs/Time Complexity Comparision.png}
-\caption{The Complexity of FFT+IFFT method is $ O(nlogn)$ where as by convolution is $O(n^2)$}
-\label{fig:time_complexity}
-\end{figure}
-
-
-\item What is the sampling frequency of the input signal?\\
-\solution The Sampling Frequency is 44.1KHz
+\item What is the sampling frequency of the input signal?
+\\
+\solution
+Sampling frequency(fs)=48kHZ.
 \item
 What is type, order and  cutoff-frequency of the above butterworth filter
 \\
-\solution The given butterworth filter is lowpass with order=4 and cutoff-frequency=1kHz.
-
-\item
-Modify the code with different input parameters and get the best possible output.
-
 \solution
-A better filtering was found on setting the order of the filter to be 5.
+The given butterworth filter is low pass with order=4 and cutoff-frequency=5kHz.
+%
+\item
+Modifying the code with different input parameters to get the best possible output.
 
 \end{enumerate}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.2)  3 APR 2024 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.2)  5 APR 2024 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1354,18 +1354,19 @@ File: figs/After_audiofilter.jpg Graphic file (type jpg)
 <use figs/After_audiofilter.jpg>
 Package pdftex.def Info: figs/After_audiofilter.jpg  used on input line 87.
 (pdftex.def)             Requested size: 201.60077pt x 134.52875pt.
-<figs/Plot_xn_yn.png, id=37, 462.528pt x 346.896pt>
-File: figs/Plot_xn_yn.png Graphic file (type png)
-<use figs/Plot_xn_yn.png>
-Package pdftex.def Info: figs/Plot_xn_yn.png  used on input line 122.
-(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \vbox (badness 1424) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./figs/Before_audiofilter.jpg> <./figs/After_audiofilter.jpg>]
+<figs/Plot_xn_yn.png, id=75, 462.528pt x 346.896pt>
+File: figs/Plot_xn_yn.png Graphic file (type png)
+<use figs/Plot_xn_yn.png>
+Package pdftex.def Info: figs/Plot_xn_yn.png  used on input line 122.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+
 
 LaTeX Warning: Command \j invalid in math mode on input line 225.
 
@@ -1379,12 +1380,12 @@ LaTeX Warning: Command \j invalid in math mode on input line 227.
 LaTeX Warning: Command \j invalid in math mode on input line 227.
 
 [2 <./figs/Plot_xn_yn.png>]
-<figs/H(z)_3.5.png, id=117, 462.528pt x 346.896pt>
+<figs/H(z)_3.5.png, id=116, 462.528pt x 346.896pt>
 File: figs/H(z)_3.5.png Graphic file (type png)
 <use figs/H(z)_3.5.png>
 Package pdftex.def Info: figs/H(z)_3.5.png  used on input line 249.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/hn.png, id=122, 462.528pt x 346.896pt>
+<figs/hn.png, id=121, 462.528pt x 346.896pt>
 File: figs/hn.png Graphic file (type png)
 <use figs/hn.png>
 Package pdftex.def Info: figs/hn.png  used on input line 282.
@@ -1394,12 +1395,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--316
 
  []
 
-<figs/hndef.png, id=155, 462.528pt x 346.896pt>
+<figs/hndef.png, id=156, 462.528pt x 346.896pt>
 File: figs/hndef.png Graphic file (type png)
 <use figs/hndef.png>
 Package pdftex.def Info: figs/hndef.png  used on input line 325.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/y_by_conv.png, id=160, 462.528pt x 346.896pt>
+<figs/y_by_conv.png, id=161, 462.528pt x 346.896pt>
 File: figs/y_by_conv.png Graphic file (type png)
 <use figs/y_by_conv.png>
 Package pdftex.def Info: figs/y_by_conv.png  used on input line 350.
@@ -1411,7 +1412,7 @@ LaTeX Warning: Command \j invalid in math mode on input line 375.
 LaTeX Warning: Command \j invalid in math mode on input line 385.
 
 [4 <./figs/hndef.png> <./figs/y_by_conv.png>]
-<figs/yn_verf_5.4.png, id=190, 462.528pt x 346.896pt>
+<figs/yn_verf_5.4.png, id=191, 462.528pt x 346.896pt>
 File: figs/yn_verf_5.4.png Graphic file (type png)
 <use figs/yn_verf_5.4.png>
 Package pdftex.def Info: figs/yn_verf_5.4.png  used on input line 402.
@@ -1446,7 +1447,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--460
 
  []
 
-<figs/Audio_Filter_verf.png, id=194, 462.528pt x 346.896pt>
+<figs/Audio_Filter_verf.png, id=195, 462.528pt x 346.896pt>
 File: figs/Audio_Filter_verf.png Graphic file (type png)
 <use figs/Audio_Filter_verf.png>
 Package pdftex.def Info: figs/Audio_Filter_verf.png  used on input line 467.
@@ -1467,28 +1468,28 @@ Underfull \hbox (badness 2460) in paragraph at lines 514--516
  []
 
 (./tables/audio_filter_tab.tex
-Overfull \hbox (11.15627pt too wide) in paragraph at lines 5--14
+Overfull \hbox (11.16565pt too wide) in paragraph at lines 5--14
  [][] 
  []
 
 )
-<figs/Filter_Response.png, id=229, 462.528pt x 346.896pt>
+<figs/Filter_Response.png, id=230, 462.528pt x 346.896pt>
 File: figs/Filter_Response.png Graphic file (type png)
 <use figs/Filter_Response.png>
 Package pdftex.def Info: figs/Filter_Response.png  used on input line 534.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
  [6 <./figs/Filter_Response.png>]
-<figs/Butterworth_analog.png, id=256, 462.528pt x 346.896pt>
+<figs/Butterworth_analog.png, id=257, 462.528pt x 346.896pt>
 File: figs/Butterworth_analog.png Graphic file (type png)
 <use figs/Butterworth_analog.png>
 Package pdftex.def Info: figs/Butterworth_analog.png  used on input line 547.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/Pole_Zero_Plt.png, id=257, 722.7pt x 578.16pt>
+<figs/Pole_Zero_Plt.png, id=258, 722.7pt x 578.16pt>
 File: figs/Pole_Zero_Plt.png Graphic file (type png)
 <use figs/Pole_Zero_Plt.png>
 Package pdftex.def Info: figs/Pole_Zero_Plt.png  used on input line 560.
 (pdftex.def)             Requested size: 252.0pt x 201.60033pt.
-<figs/h(n)_6.2.png, id=258, 462.528pt x 346.896pt>
+<figs/h(n)_6.2.png, id=259, 462.528pt x 346.896pt>
 File: figs/h(n)_6.2.png Graphic file (type png)
 <use figs/h(n)_6.2.png>
 Package pdftex.def Info: figs/h(n)_6.2.png  used on input line 567.
@@ -1496,26 +1497,9 @@ Package pdftex.def Info: figs/h(n)_6.2.png  used on input line 567.
 
 Underfull \vbox (badness 5245) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 573--574
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
-
- []
-
-<figs/Time Complexity Comparision.png, id=259, 462.528pt x 346.896pt>
-File: figs/Time Complexity Comparision.png Graphic file (type png)
-<use figs/Time Complexity Comparision.png>
-Package pdftex.def Info: figs/Time Complexity Comparision.png  used on input li
-ne 603.
-(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-[7 <./figs/Butterworth_analog.png> <./figs/Pole_Zero_Plt.png> <./figs/h(n)_6.2.
-png>] [8
-
- <./figs/Time Complexity Comparision.png>] (./main.aux)
+ [7 <./figs/Butterworth_analog.png> <./figs/Pole_Zero_Plt.png> <./figs/h(n)_6.2
+.png>]
+(./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1523,14 +1507,14 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C50489AC4B237CCA6623115DF81D02F2;673.
  ) 
 Here is how much of TeX's memory you used:
- 43804 strings out of 478287
- 1008262 string characters out of 5849290
- 1647295 words of memory out of 5000000
- 61096 multiletter control sequences out of 15000+600000
+ 43782 strings out of 478287
+ 1007783 string characters out of 5849290
+ 1633165 words of memory out of 5000000
+ 61088 multiletter control sequences out of 15000+600000
  551005 words of font info for 207 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  115i,17n,118p,424b,1958s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{lstnumber.-2.31} has been referenced but does not
+pdfTeX warning (dest): name{lstnumber.-2.12} has been referenced but does not
  exist, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
@@ -1542,10 +1526,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 596001 bytes).
+Output written on main.pdf (7 pages, 566779 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 173 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 300 compressed objects within 3 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
