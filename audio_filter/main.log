@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.2)  5 APR 2024 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.2)  5 APR 2024 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,25 +1348,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 File: figs/Before_audiofilter.jpg Graphic file (type jpg)
 <use figs/Before_audiofilter.jpg>
 Package pdftex.def Info: figs/Before_audiofilter.jpg  used on input line 82.
-(pdftex.def)             Requested size: 201.60077pt x 136.80461pt.
+(pdftex.def)             Requested size: 189.0pt x 128.24976pt.
 <figs/After_audiofilter.jpg, id=34, 1022.82124pt x 682.55pt>
 File: figs/After_audiofilter.jpg Graphic file (type jpg)
 <use figs/After_audiofilter.jpg>
 Package pdftex.def Info: figs/After_audiofilter.jpg  used on input line 87.
-(pdftex.def)             Requested size: 201.60077pt x 134.52875pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
- <./figs/Before_audiofilter.jpg> <./figs/After_audiofilter.jpg>]
-<figs/Plot_xn_yn.png, id=75, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 189.0pt x 126.12396pt.
+<figs/Plot_xn_yn.png, id=37, 462.528pt x 346.896pt>
 File: figs/Plot_xn_yn.png Graphic file (type png)
 <use figs/Plot_xn_yn.png>
 Package pdftex.def Info: figs/Plot_xn_yn.png  used on input line 122.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
+Underfull \vbox (badness 1762) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figs/Before_audiofilter.jpg> <./figs/After_audiofilter.jpg>]
 
 LaTeX Warning: Command \j invalid in math mode on input line 225.
 
@@ -1380,12 +1379,12 @@ LaTeX Warning: Command \j invalid in math mode on input line 227.
 LaTeX Warning: Command \j invalid in math mode on input line 227.
 
 [2 <./figs/Plot_xn_yn.png>]
-<figs/H(z)_3.5.png, id=116, 462.528pt x 346.896pt>
+<figs/H(z)_3.5.png, id=118, 462.528pt x 346.896pt>
 File: figs/H(z)_3.5.png Graphic file (type png)
 <use figs/H(z)_3.5.png>
 Package pdftex.def Info: figs/H(z)_3.5.png  used on input line 249.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/hn.png, id=121, 462.528pt x 346.896pt>
+<figs/hn.png, id=123, 462.528pt x 346.896pt>
 File: figs/hn.png Graphic file (type png)
 <use figs/hn.png>
 Package pdftex.def Info: figs/hn.png  used on input line 282.
@@ -1509,7 +1508,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  43782 strings out of 478287
  1007783 string characters out of 5849290
- 1633165 words of memory out of 5000000
+ 1652165 words of memory out of 5000000
  61088 multiletter control sequences out of 15000+600000
  551005 words of font info for 207 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1526,7 +1525,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 566779 bytes).
+Output written on main.pdf (7 pages, 566726 bytes).
 PDF statistics:
  354 PDF objects out of 1000 (max. 8388607)
  300 compressed objects within 3 object streams
